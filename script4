@@ -1,0 +1,16 @@
+let getPrice = function (timeInHours, isUrgent) {
+  
+  let rate = 1500;
+     
+   if(isUrgent) {
+     timeInHours /= 2;
+     rate *= 2.5;
+   }
+  
+   if(timeInHours > 150) {
+    rate -= 250;
+  };
+    
+  return timeInHours * rate;
+
+}
