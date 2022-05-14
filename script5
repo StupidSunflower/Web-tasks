@@ -1,0 +1,14 @@
+let getSortedArray = function (array, key) {
+   for (let i = 0; i < array.length - 1; i++) {
+     let minValue = array[i][key]
+     for (let j = i + 1; j < array.length; j++) {
+       if (array[j][key] < minValue) {
+         minValue = array[j][key]
+         let swap = array[i];
+         array[i] = array[j];
+         array[j] = swap;
+    }
+   }
+  }
+ return array;
+}
