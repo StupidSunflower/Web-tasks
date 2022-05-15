@@ -7,3 +7,5 @@ var tax = percent * blackSalary;
 var whiteSalary = blackSalary - tax;
 return whiteSalary;
 };
+console.log(whiteSalary)
+
