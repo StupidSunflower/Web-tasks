@@ -1,0 +1,32 @@
+var temperature = 20;
+var itsRaining = false;
+
+var minutes;
+var n = 20 - temperature;
+
+if (itsRaining) {
+  minutes = 0;
+  console.log('Идет дождь, прогулка ' + minutes + ' минут');
+} 
+else if (!itsRaining) {
+  if (temperature < 0 || temperature > 35) {
+   minutes = 0;
+   console.log('Температура слишком низкая или слишком высокая, прогулка ' + minutes + ' минут')
+  } 
+  else if (temperature == 20) {
+  minutes = 20;
+  console.log('Идеальная прогулка, ' + minutes + ' минут');
+  } 
+  else if (temperature < 20) {
+   if (temperature == 20 - n) {
+    minutes = 20 - n;
+    console.log('Время прогулки ' + minutes + ' минут');
+   }
+  }
+  else if (temperature > 20) {
+   if (temperature == 20 - n) {
+     minutes = 20 - -n;
+     console.log('Время прогулки ' + minutes + ' минут')
+   }
+  }
+}
